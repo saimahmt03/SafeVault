@@ -1,0 +1,38 @@
+
+### Add User
+POST http://localhost:5222/safevault/adduser
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer <your_jwt_token_here>
+
+{
+  "firstname": "Saimah",
+  "lastname": "Tocalo",
+  "email": "SMT110394@gmail.com",
+  "username": "saimahMT03",
+  "password": "@iloveProgramming<3",
+  "type": 2,
+  "applicationSignature": "SafeVaultClient"
+}
+
+### Get All Users
+GET http://localhost:5222/safevault/getallusers
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYWltYWhNVDAzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiJmNGUwZTYyZS1kNTdkLTRjZGYtYjJjNC1hZTU4YjkxZjEwYTQiLCJpYXQiOjE3NDYyMzk2NzIsIm5iZiI6MTc0NjIzOTY3MiwiZXhwIjoxNzQ2MjM5ODUyLCJpc3MiOiJTYWZlVmF1bHRBUEkiLCJhdWQiOiJTYWZlVmF1bHRDbGllbnQifQ.LdCUhJR0bmsGyxFCstkTbfVABKcCe9MLhvhVGh-Y9YU
+
+### Token Issuer 
+POST http://localhost:5222/safevault/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "saimahMT03", 
+    "password" : "@iloveProgramming<3"
+}
+
+### Token Validator
+GET http://localhost:5222/safevault/tokenvalidate
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYWltYWhNVDAzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiI4YTE0NGUyOC1mNzA5LTRhYzUtODY4MS1kNjMyMTEzZDFjYzAiLCJpYXQiOjE3NDYxOTc1NjUsIm5iZiI6MTc0NjE5NzU2NSwiZXhwIjoxNzQ2MTk3NzQ1LCJpc3MiOiJTYWZlVmF1bHRBUEkiLCJhdWQiOiJTYWZlVmF1bHRDbGllbnQifQ.SwreygIqqeG6v43Tl5zP50vAM_lxSLTuJ3wc59m_OVk
